@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ chart_title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>{{ chart_title }}</h1>
+        <div id="chart"></div>
+        <p><a href="/">Back to Charts List</a></p>
+    </div>
+
+    <script>
+        var plot_json = {{ plot_json | safe }};
+        Plotly.react('chart', plot_json.data, plot_json.layout);
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Golf Data Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Golf Data Analysis Charts</h1>
+        <ul class="list-group">
+            {% for chart in charts %}
+                <li class="list-group-item"><a href="{{ chart.url }}">{{ chart.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
